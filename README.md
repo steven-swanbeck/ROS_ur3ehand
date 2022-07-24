@@ -22,12 +22,73 @@ ROS packages to allow control of Universal Robots UR3e manipulator with Universi
     * Some of the scripts include examples of how to publish to the arduino topic to interface with this repository's [companion repository](https://github.com/steven-swanbeck/gripperROSIntegration).
 ---
 
-## Requirements and Building
+## Requirements, Dependencies, and Building
 These packages are built and tested on a system running ROS noetic on Ubuntu 20.04.  
-Building
+Use of these packages in a non-simulated environment requires the use of the official [Universal Robots ROS Drivers](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver). Slight modifications may be necessary to get these drivers to load the proper configuration files. Please contact the author at stevenswanbeck@nevada.unr.edu if help is needed to do this.  
+1. Create a Catkin workspace:
+```console
+mkdir -p catkin_ur3ehand/src && cd catkin_ur3ehand
+```
+2. Clone the contents of this repository:
+```console
+git clone https://github.com/steven-swanbeck/ROS_ur3ehand.git
+```
+3. Clone the UR Robots ROS Driver:
+```console
+git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
+```
+4. Install all package dependencies:
+```console
+rosdep install --from-paths src --ignore-src -r -y
+```
+5. Make the workspace:
+```console
+catkin_make
+```
+6. Source the workspace:
+```console
+source devel/setup.bash
+```
+---
 
-## Dependencies/Further Setup
-Use of these packages in a non-simulated environment requires the use of the official [Universal Robots ROS Drivers](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver). Slight modifications may be necessary to get these drivers to load the proper configuration files. Please contact the author at stevenswanbeck@nevada.unr.edu if help is needed to do this.
+## Commonly Used Commands
+1. To launch a simple demo of the robot configured in RViz, use:
+```console
+roslaunch ur3ehand_moveit_config demo.launch
+```
+---
+2. To expand the capabilites of this demo to Gazebo to simulate the robot, instead run:
+```console
+roslaunch ur3ehand_moveit_config demo_gazebo.launch
+```
+---
+3. To run MoveIt with the real robot and drivers, the PC and robot must be configured as described in [Universal Robots ROS Drivers](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver). Once this is done, start with:
+```console
+roslaunch ur_robot_driver ur3e_bringup.launch <robot_ip> <port> <kinematics_config>
+```
+ex:
+```console
+roslaunch ur_robot_driver ur3e_bringup.launch robot_ip:=192.168.0.2 [reverse_port:=REVERSE_PORT] kinematics_config:=$(rospack find  ur_calibration)/my_ur3_calibration.yaml
+```
+Then use:
+```console
+roslaunch ur3ehand_moveit_config ur3ehand_moveit_planning_execution.launch limited:=true
+```
+Followed by:
+```console
+roslaunch ur3ehand_moveit_config moveit_rviz.launch config:=true
+```
+**Note: The fixed frame may have to be defined and the robot model may need to be loaded in after this node has been launched. Scene objects should also be loaded in if necessary to prevent environment collisions.**
+***
+Once the RViz is launched through any of these methods, movement scripts can be passed to the robot in the form:
+```console
+rosrun ur3ehand_scripts <executable>
+```
+ex:
+```console
+rosrun ur3ehand_scripts test_pickplace2.py
+```
+---
 
 ## Arduino Integration with Soft Gripper
 For full details of the ROS integration of the Arduino-based gripper with these packages, view this repository's [companion repository](https://github.com/steven-swanbeck/ur3ehand).
