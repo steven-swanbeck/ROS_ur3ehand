@@ -7,6 +7,7 @@ It is the companion repository to https://github.com/steven-swanbeck/gripperROSI
 
 ## Purpose
 ROS packages to allow control of Universal Robots UR3e manipulator with University of Nevada, Reno Smart Robotics Lab's TSA-Driven Soft Robotic Hand. Packages can be used for motion planning and execution with the real robot or in simulation using Gazebo.
+![20220429_142555](https://user-images.githubusercontent.com/99771915/180668626-87d21a32-0e39-43e8-98b6-ef3fa3bb8e55.jpg)
 
 ## Contents
 1. **ur3ehand_description**
@@ -56,11 +57,13 @@ source devel/setup.bash
 ```console
 roslaunch ur3ehand_moveit_config demo.launch
 ```
+![Screenshot from 2022-07-24 15-14-10](https://user-images.githubusercontent.com/99771915/180668069-c6ace6f6-42e7-4eed-b04a-3cbc2879fd0d.png)
 ---
 2. To expand the capabilites of this demo to Gazebo to simulate the robot, instead run:
 ```console
 roslaunch ur3ehand_moveit_config demo_gazebo.launch
 ```
+![Screenshot from 2022-07-24 15-24-07](https://user-images.githubusercontent.com/99771915/180668176-ad85acdd-48ab-4c7c-9318-9e49778525ff.png)
 ---
 3. To run MoveIt with the real robot and drivers, the PC and robot must be configured as described in [Universal Robots ROS Drivers](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver). Once this is done, start with:
 ```console
@@ -88,7 +91,8 @@ ex:
 ```console
 rosrun ur3ehand_scripts test_pickplace2.py
 ```
----
+[Screencast from 07-24-2022 03:28:46 PM.webm](https://user-images.githubusercontent.com/99771915/180668403-3f5fb114-27e2-4fbe-a7f3-14e8b3f1ee51.webm)
+***
 
 ## Arduino Integration with Soft Gripper
 For full details of the ROS integration of the Arduino-based gripper with these packages, view this repository's [companion repository](https://github.com/steven-swanbeck/ur3ehand).
