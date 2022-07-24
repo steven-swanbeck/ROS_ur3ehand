@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find ur3ehand_moveit_config)/config/ros_controllers.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <!--arg name="controllers" default="joint_state_controller manipulator_controller"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="$(arg controllers)" /-->
+  <arg name="controllers" default="manipulator_controller"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="$(arg controllers)" />
+    <!--output="screen" args="joint_state_controller manipulator_controller"/ -->
+    <!-- output="screen" args="manipulator_controller "/ -->
+
+</launch>
