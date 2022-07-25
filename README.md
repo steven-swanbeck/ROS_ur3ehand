@@ -95,7 +95,7 @@ rosrun ur3ehand_scripts test_pickplace2.py
 ***
 
 ## Arduino Integration with Soft Gripper
-For full details of the ROS integration of the Arduino-based gripper with these packages, view this repository's [companion repository](https://github.com/steven-swanbeck/ur3ehand).
+For full details of the ROS integration of the Arduino-based gripper with these packages, view this repository's [companion repository](https://github.com/steven-swanbeck/gripperROSIntegration).
 ***
 ## Helpful Links
 https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html  
