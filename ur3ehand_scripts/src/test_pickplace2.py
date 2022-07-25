@@ -35,9 +35,6 @@ manipulator_group = moveit_commander.MoveGroupCommander("manipulator")
 manipulator_group.set_named_target("pick")
 plan1 = manipulator_group.go()
 
-pub.publish(poweron_command)
-rospy.sleep(2)
-
 joint_goal = manipulator_group.get_current_joint_values()
 joint_goal[0] = 2.2023980034384634
 joint_goal[1] = -0.9120257774970887
@@ -48,6 +45,9 @@ joint_goal[5] = 0.785398
 # joint_goal[5] = -0.0001313144910217047
 manipulator_group.go(joint_goal, wait=True)
 manipulator_group.stop()
+
+pub.publish(poweron_command)
+rospy.sleep(1)
 
 joint_goal = manipulator_group.get_current_joint_values()
 joint_goal[0] = 2.532851104178941
@@ -62,7 +62,7 @@ manipulator_group.stop()
 
 # Puiblish the grasp message to the arduino topic
 pub.publish(grasp_command)
-rospy.sleep(5)
+rospy.sleep(3)
 
 joint_goal = manipulator_group.get_current_joint_values()
 joint_goal[0] = 2.532851104178941
@@ -98,7 +98,7 @@ manipulator_group.go(joint_goal, wait=True)
 manipulator_group.stop()
 
 pub.publish(reset_command)
-rospy.sleep(5)
+rospy.sleep(3)
 
 joint_goal = manipulator_group.get_current_joint_values()
 joint_goal[0] = 2.9608131806195233
@@ -111,12 +111,12 @@ joint_goal[5] = 0.749343
 manipulator_group.go(joint_goal, wait=True)
 manipulator_group.stop()
 
+pub.publish(poweroff_command)
+rospy.sleep(1)
+
 manipulator_group = moveit_commander.MoveGroupCommander("manipulator")
 manipulator_group.set_named_target("pick")
 plan1 = manipulator_group.go()
-
-pub.publish(poweroff_command)
-rospy.sleep(2)
 
 manipulator_group = moveit_commander.MoveGroupCommander("manipulator")
 manipulator_group.set_named_target("up")
