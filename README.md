@@ -91,7 +91,11 @@ ex:
 ```console
 rosrun ur3ehand_scripts test_pickplace2.py
 ```
-[Screencast from 07-24-2022 03:28:46 PM.webm](https://user-images.githubusercontent.com/99771915/180668403-3f5fb114-27e2-4fbe-a7f3-14e8b3f1ee51.webm)
+Running in simulation and with real system:
+***
+[Screencast from 07-24-2022 03:28:46 PM.webm](https://user-images.githubusercontent.com/99771915/180668403-3f5fb114-27e2-4fbe-a7f3-14e8b3f1ee51.webm) 
+***
+https://user-images.githubusercontent.com/99771915/180924977-beed9b2a-423b-4f19-8d4b-48126be9a99b.mp4
 ***
 
 ## Arduino Integration with Soft Gripper
@@ -100,4 +104,4 @@ For full details of the ROS integration of the Arduino-based gripper with these 
 ## Helpful Links
 https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html  
 https://moveit.readthedocs.io/en/latest/doc/pr2_tutorials/planning/src/doc/move_group_interface_tutorial.html#moving-to-a-pose-goal  
-https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet
+<!--https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet-->
