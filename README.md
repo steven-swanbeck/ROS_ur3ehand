@@ -2,7 +2,7 @@
 
 ## Acknowledgment
 This repository was created for the Smart Robotics Lab at the University of Nevada, Reno.
-It is the companion repository to https://github.com/steven-swanbeck/gripperROSIntegration.
+It is the companion repository to [gripperROSintegration](https://github.com/steven-swanbeck/gripperROSIntegration).
 ---
 
 ## Purpose
