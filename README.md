@@ -97,6 +97,9 @@ Running in simulation and with real system:
 ***
 https://user-images.githubusercontent.com/99771915/180924977-beed9b2a-423b-4f19-8d4b-48126be9a99b.mp4
 ***
+https://user-images.githubusercontent.com/99771915/181392375-83add6a5-c337-4079-89b3-b1a7de0752b1.mp4
+***
+
 
 ## Arduino Integration with Soft Gripper
 For full details of the ROS integration of the Arduino-based gripper with these packages, view this repository's [companion repository](https://github.com/steven-swanbeck/gripperROSIntegration).
