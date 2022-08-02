@@ -91,13 +91,16 @@ ex:
 ```console
 rosrun ur3ehand_scripts test_pickplace2.py
 ```
-Running in simulation and with real system:
+## Running in simulation and with real system:
 ***
-[Screencast from 07-24-2022 03:28:46 PM.webm](https://user-images.githubusercontent.com/99771915/180668403-3f5fb114-27e2-4fbe-a7f3-14e8b3f1ee51.webm) 
+### Simulating Robot Using Gazebo:  
+[Simulating robot with Gazebo](https://user-images.githubusercontent.com/99771915/180668403-3f5fb114-27e2-4fbe-a7f3-14e8b3f1ee51.webm) 
 ***
-https://user-images.githubusercontent.com/99771915/180924977-beed9b2a-423b-4f19-8d4b-48126be9a99b.mp4
+### Simple Pick-and-Place Demonstration:  
+[Pick-place demonstration](https://user-images.githubusercontent.com/99771915/180924977-beed9b2a-423b-4f19-8d4b-48126be9a99b.mp4)
 ***
-https://user-images.githubusercontent.com/99771915/182464740-69e11d78-788f-4822-9b3e-c8cb71fe61d9.mp4
+### Secret Handshake Demo Showing Safe Human-Robot Interaction:  
+[Secret handshake](https://user-images.githubusercontent.com/99771915/182464740-69e11d78-788f-4822-9b3e-c8cb71fe61d9.mp4)
 ***
 
 ## Arduino Integration with Soft Gripper
