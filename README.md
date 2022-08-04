@@ -28,7 +28,7 @@ These packages are built and tested on a system running ROS noetic on Ubuntu 20.
 Use of these packages in a non-simulated environment requires the use of the official [Universal Robots ROS Drivers](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver). Slight modifications may be necessary to get these drivers to load the proper configuration files. Please contact the author at stevenswanbeck@nevada.unr.edu if help is needed to do this.  
 1. Create a Catkin workspace:
 ```console
-mkdir -p catkin_ur3ehand/src && cd catkin_ur3ehand
+mkdir -p catkin_ur3ehand/src && cd catkin_ur3ehand/src
 ```
 2. Clone the contents of this repository:
 ```console
@@ -105,6 +105,13 @@ rosrun ur3ehand_scripts test_pickplace2.py
 
 ## Arduino Integration with Soft Gripper
 For full details of the ROS integration of the Arduino-based gripper with these packages, view this repository's [companion repository](https://github.com/steven-swanbeck/gripperROSIntegration).
+***
+
+## Troubleshooting  
+If ROS informs the user that it was not able to execute a script file of the target name, try changing the executable permissions using:
+```console
+chmod +x <filename>
+```
 ***
 ## Helpful Links
 https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html  
