@@ -117,3 +117,8 @@ chmod +x <filename>
 https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html  
 https://moveit.readthedocs.io/en/latest/doc/pr2_tutorials/planning/src/doc/move_group_interface_tutorial.html#moving-to-a-pose-goal  
 <!--https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet-->
+
+***
+The gripper was also shared with NASA's Dexterous Robotics Team at Johnson Space Center. It is shown here attached to their Valkyrie humanoid astronaut.
+
+![gripperonValkyrie](https://user-images.githubusercontent.com/99771915/199402019-3459b941-13ed-40c0-9ae5-49133bb04c8d.jpg)
